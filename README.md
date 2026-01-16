@@ -46,13 +46,11 @@ The application demonstrates a clean, responsive chat interface suitable for web
 ## Setup Instructions
 
 1. **Clone the repository:**
-
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
-
+     git clone [https://github.com/<your-username>/<repo-name>.git](https://github.com/himanshirawat/ai-chatbot.git)
+     cd ai-chatbot
 2. **Install dependencies:**
      npm install
-3. **Create .env file (based on .env.example):**
+3. **Create .env file (based on .env.example)**
 4. **Run the development server:**
      npm run dev
 
