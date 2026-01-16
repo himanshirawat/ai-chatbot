@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import MessageBubble from "./MessageBubble";
 
 export default function MessageList({ messages }) {
   const bottomRef = useRef(null);
@@ -23,12 +22,19 @@ export default function MessageList({ messages }) {
               }`}
             >
               {msg.content}
+
               <div
                 className={`text-xs mt-1 text-right ${
                   isUser ? "text-white" : "text-gray-500"
                 }`}
               >
                 {new Date(msg.timestamp).toLocaleTimeString()}
+                <button
+                  onClick={() => navigator.clipboard.writeText(msg.content)}
+                  className=" hover:underline ml-2"
+                >
+                  Copy
+                </button>
               </div>
             </div>
           </div>

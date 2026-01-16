@@ -5,7 +5,20 @@ import MessageList from "./MessageList";
 import ChatInput from "./ChatInput";
 
 export default function ChatWindow() {
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("chat_messages");
+      return saved ? JSON.parse(saved) : [];
+    }
+    return [];
+  });
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("chat_messages", JSON.stringify(messages));
+    }
+  }, [messages]);
+
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSend = async (text) => {
@@ -97,11 +110,6 @@ export default function ChatWindow() {
   useEffect(() => {
     localStorage.setItem("chat_messages", JSON.stringify(messages));
   }, [messages]);
-
-  useEffect(() => {
-    const saved = localStorage.getItem("chat_messages");
-    if (saved) setMessages(JSON.parse(saved));
-  }, []);
 
   return (
     <div className="flex flex-col h-screen max-w-2xl mx-auto border rounded shadow-md bg-white">
