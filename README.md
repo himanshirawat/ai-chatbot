@@ -51,14 +51,14 @@ git clone https://github.com/<your-username>/<repo-name>.git
 cd <repo-name>
 
 2. **Install dependencies:**
-
-npm install
-# or
-yarn install
-
+     npm install
 3. **Create .env file (based on .env.example):**
 4. **Run the development server:**
-npm run dev
-# or
-yarn dev
+     npm run dev
 
+## Demo Video Link 
+https://drive.google.com/file/d/1L-GLLymgqn2I8SRTWZ_24xbpdcvE2ZPN/view?usp=sharing
+
+
+## Site Live Link
+https://ai-chatbot-azure-six.vercel.app/
