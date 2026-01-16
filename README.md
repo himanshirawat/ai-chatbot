@@ -24,12 +24,7 @@ The application demonstrates a clean, responsive chat interface suitable for web
 - **Message persistence** using `localStorage`
 - **Clear chat** functionality
 - Responsive UI using **Tailwind CSS**
-
-### Optional / Bonus Features (not implemented)
 - Copy message to clipboard  
-- Markdown rendering in AI responses  
-- Dark/light theme toggle  
-- Animated typing indicator  
 
 ---
 
